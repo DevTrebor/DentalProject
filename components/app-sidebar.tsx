@@ -30,7 +30,7 @@ const items = [
     navigation:[
         {
             label:"Clinic Profile",
-            url:"#",
+            url:"/pages/ClinicProfile",
             icon:UserPen 
         },
         {
