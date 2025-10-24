@@ -1,8 +1,12 @@
 'use client';
 
-import TiltedCard from './components/TiltedCard';
+import BlurText from "@/components/BlurText";
 
 export default function Page() {
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
+
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-center p-10">
       {/* 👨‍⚕️ About Section */}
@@ -26,25 +30,24 @@ export default function Page() {
             About us
           </h1>
 
-          <p>
-            Welcome to <strong>Heavenly Touch Dental Clinic</strong>, your trusted partner in achieving a healthier, brighter smile.
-          </p>
+          {/* ✨ BlurText with full paragraph content */}
+        
+<BlurText
+            text={`Welcome to Heavenly Touch Dental Clinic, your trusted partner in achieving a healthier, brighter smile.
 
-          <p className="mt-4">
-            At Heavenly Touch Dental Clinic, we believe that dental care should be more than just treatment — it should be a comforting experience guided by gentle hands and a caring heart. Under the expert care of <strong>Dr. Nel Rugas</strong>, our clinic is dedicated to providing top-quality dental services with a personal touch that makes every patient feel at ease.
-          </p>
+At Heavenly Touch Dental Clinic, we believe that dental care should be more than just treatment — it should be a comforting experience guided by gentle hands and a caring heart. Under the expert care of Dr. Nel Rugas, our clinic is dedicated to providing top-quality dental services with a personal touch that makes every patient feel at ease.
 
-          <p className="mt-4">
-            Our mission is to help you achieve and maintain optimal oral health through comprehensive, compassionate, and affordable dental care. Whether you’re visiting us for a routine check-up, a smile makeover, or advanced restorative treatment, we’re here to ensure your comfort and satisfaction every step of the way.
-          </p>
+Our mission is to help you achieve and maintain optimal oral health through comprehensive, compassionate, and affordable dental care. Whether you’re visiting us for a routine check-up, a smile makeover, or advanced restorative treatment, we’re here to ensure your comfort and satisfaction every step of the way.
 
-          <p className="mt-4">
-            With modern facilities, state-of-the-art equipment, and a welcoming atmosphere, we strive to make every visit relaxing and rewarding. Dr. Nel Rugas and the entire Heavenly Touch team take pride in building lasting relationships with our patients — rooted in trust, transparency, and genuine care.
-          </p>
+With modern facilities, state-of-the-art equipment, and a welcoming atmosphere, we strive to make every visit relaxing and rewarding. Dr. Nel Rugas and the entire Heavenly Touch team take pride in building lasting relationships with our patients — rooted in trust, transparency, and genuine care.
 
-          <p className="mt-4">
-            Because at Heavenly Touch Dental Clinic, your smile truly deserves a heavenly touch.
-          </p>
+Because at Heavenly Touch Dental Clinic, your smile truly deserves a heavenly touch.`}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="text-lg leading-relaxed text-gray-800"
+          />
         </div>
       </section>
     </main>
