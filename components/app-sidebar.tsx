@@ -35,7 +35,7 @@ const items = [
         },
         {
             label:"Specialists",
-            url:"#",
+            url:"/pages/Specialists",
             icon:UsersRound 
         },
     ]
